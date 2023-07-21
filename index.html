@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smartphone Simulator</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simulatore di chiamate</h1>
+      <form id="ricarica-form">
+        <div class="form-group">
+          <label for="ricarica-input">Ricarica il tuo credito:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="ricarica-input"
+            placeholder="Inserisci l'importo in euro"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Ricarica</button>
+      </form>
+      <form id="chiamata-form">
+        <div class="form-group">
+          <label for="chiamata-input">Effettua una chiamata:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="chiamata-input"
+            placeholder="Inserisci la durata in minuti"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Chiama</button>
+      </form>
+      <button id="mostra-registro" class="btn btn-secondary">
+        Mostra Registro delle Chiamate
+      </button>
+      <button id="azzera-chiamate" class="btn btn-danger">
+        Azzera Contatore delle Chiamate
+      </button>
+      <div id="info">
+        <p>Credito residuo: <span id="credito-residuo"></span></p>
+        <p>Numero di chiamate effettuate: <span id="numero-chiamate"></span></p>
+      </div>
+      <table class="table" id="registro-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Durata</th>
+            <th>Data ed Ora</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
